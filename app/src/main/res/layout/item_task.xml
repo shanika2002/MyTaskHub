@@ -1,0 +1,47 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:background="@drawable/task_item_background"
+    android:elevation="4dp"
+    android:layout_margin="8dp">
+
+        <CheckBox
+            android:id="@+id/checkBoxTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/blue1" />
+
+        <TextView
+            android:id="@+id/textViewTask"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:text="@string/sample_task"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="sans-serif" />
+
+        <ImageView
+            android:id="@+id/btnEditTask"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="12dp"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/baseline_edit_square_24" />
+
+        <ImageView
+            android:id="@+id/btnDeleteTask"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/baseline_delete_24"
+            android:contentDescription="@string/delete_task" />
+
+</LinearLayout>

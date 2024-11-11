@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/taskFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/accent"
+    tools:context=".ReminderFragment">
+
+    <!-- Scrollable content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginVertical="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Reminder Title Input -->
+            <EditText
+                android:layout_gravity="center"
+                android:id="@+id/etReminderTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_reminder_message"
+                android:padding="16dp"
+                android:textSize="16sp"
+                android:background="@color/blue2"
+                android:layout_marginTop="32dp" />
+
+            <!-- Date Picker -->
+            <DatePicker
+                android:layout_gravity="center"
+                android:id="@+id/datePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/blue2"
+                android:layout_marginTop="16dp" />
+
+            <!-- Time Picker -->
+            <TimePicker
+                android:layout_gravity="center"
+                android:id="@+id/timePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/blue2"
+                android:timePickerMode="spinner" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Floating Action Button positioned at the bottom center -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnSetReminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="140dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_action_reminder"
+        app:tint="@android:color/white"
+        android:backgroundTint="@color/blue" />
+
+</FrameLayout>
